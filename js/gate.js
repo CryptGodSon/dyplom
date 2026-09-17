@@ -139,6 +139,8 @@ function showError(text) {
 
 /* ---------- Start ---------- */
 
+sessionStorage.removeItem("order-usmiechu-unlocked"); // flaga z poprzedniej wersji strony
+
 wirePasswordToggle();
 
 const gateForm = document.getElementById("gate-form");
