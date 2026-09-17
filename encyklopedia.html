@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#a4402f">
+  <title>Encyklopedia</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/encyklopedia.css">
+</head>
+<body class="encyclopedia-page">
+  <main class="wiki" id="wiki" hidden>
+    <header class="wiki-header">
+      <div class="wiki-header-top">
+        <p class="wiki-eyebrow">Mini-encyklopedia</p>
+        <a class="wiki-back" href="index.html">Wróć do dyplomu</a>
+      </div>
+      <h1 id="wiki-title">Encyklopedia</h1>
+      <p class="wiki-subtitle" id="wiki-subtitle"></p>
+      <p class="wiki-meta">
+        <span><strong id="wiki-total">0</strong> haseł</span>
+        <span class="wiki-meta-sep" aria-hidden="true">·</span>
+        <span>wpisz <kbd>/</kbd>, aby szukać</span>
+        <span class="wiki-meta-sep" aria-hidden="true">·</span>
+        <span>strzałki <kbd>↑</kbd> <kbd>↓</kbd> przewijają listę</span>
+      </p>
+    </header>
+
+    <div class="wiki-layout">
+      <aside class="wiki-sidebar">
+        <div class="wiki-search-wrap">
+          <label class="sr-only" for="wiki-search">Szukaj hasła</label>
+          <input
+            type="search"
+            id="wiki-search"
+            class="wiki-search"
+            placeholder="Szukaj hasła…"
+            autocomplete="off"
+          >
+          <button type="button" class="wiki-clear" id="wiki-clear" aria-label="Wyczyść wyszukiwanie" hidden>&times;</button>
+        </div>
+
+        <nav class="wiki-tabs" id="wiki-tabs" aria-label="Kategorie">
+          <button class="wiki-tab active" data-category="all" type="button" aria-selected="true">
+            Wszystko <span class="wiki-tab-count">0</span>
+          </button>
+          <button class="wiki-tab" data-category="glossary" type="button" aria-selected="false">
+            Słownik <span class="wiki-tab-count">0</span>
+          </button>
+          <button class="wiki-tab" data-category="abbr" type="button" aria-selected="false">
+            Skróty <span class="wiki-tab-count">0</span>
+          </button>
+          <button class="wiki-tab" data-category="skills" type="button" aria-selected="false">
+            Soft skills <span class="wiki-tab-count">0</span>
+          </button>
+        </nav>
+
+        <div class="wiki-toolbar">
+          <span class="wiki-result-count"><strong id="wiki-count">0</strong> na liście</span>
+          <button type="button" class="wiki-random" id="wiki-random">Losowe hasło</button>
+        </div>
+
+        <ul class="wiki-index" id="wiki-index" role="listbox" aria-label="Lista haseł"></ul>
+
+        <p class="wiki-empty" id="wiki-empty" hidden>
+          Nic nie znaleziono. Spróbuj innego słowa lub zmień kategorię.
+        </p>
+      </aside>
+
+      <section class="wiki-content" id="wiki-content" aria-live="polite">
+        <div class="wiki-content-placeholder">
+          <p>Wybierz hasło z listy, aby zobaczyć wyjaśnienie.</p>
+        </div>
+      </section>
+    </div>
+
+    <footer class="wiki-footer">
+      <p class="wiki-footer-note">
+        Treści mają charakter ogólnobranżowy i edukacyjny. W sprawach procedur
+        obowiązujących w firmie zawsze decyduje wewnętrzna dokumentacja i przełożony.
+      </p>
+      <a href="index.html">Wróć do Orderu Uśmiechu</a>
+    </footer>
+  </main>
+
+  <script src="js/crypto.js"></script>
+  <script src="js/encyklopedia.js"></script>
+</body>
+</html>

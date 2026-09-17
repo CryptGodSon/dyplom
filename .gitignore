@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+
+# prywatne: notatki (haslo) i jawne zrodla tresci - nigdy do repo
+NOTES.md
+private/

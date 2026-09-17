@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#a4402f">
+  <title>Order Uśmiechu</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏅</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Caveat:wght@600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="gate" id="gate">
+    <div class="gate-card">
+      <svg class="gate-seal" viewBox="0 0 100 100" aria-hidden="true">
+        <defs>
+          <radialGradient id="wax" cx="40%" cy="35%" r="70%">
+            <stop offset="0" stop-color="#c85a46"/>
+            <stop offset="0.7" stop-color="#a4402f"/>
+            <stop offset="1" stop-color="#7f2e22"/>
+          </radialGradient>
+        </defs>
+        <path fill="url(#wax)" d="M50 4c9 0 12 6 20 7s14-2 20 5 3 13 6 21 7 11 4 19-9 9-12 17-2 15-9 19-13-1-21 0-14 6-21 2-6-12-12-17-11-8-12-17 3-11 6-19-1-14 4-21 12-4 20-5 8-11 17-11z"/>
+        <circle cx="50" cy="50" r="30" fill="none" stroke="#f3d3c7" stroke-opacity="0.55" stroke-width="1.5"/>
+        <circle cx="50" cy="50" r="26" fill="none" stroke="#f3d3c7" stroke-opacity="0.35" stroke-width="0.8"/>
+        <path fill="#f6dccf" d="M50 30l5.2 10.6 11.7 1.7-8.5 8.2 2 11.6L50 56.6l-10.4 5.5 2-11.6-8.5-8.2 11.7-1.7z"/>
+      </svg>
+      <p class="gate-eyebrow">Dostęp prywatny</p>
+      <h1>Order Uśmiechu</h1>
+      <p class="gate-subtitle">Ta strona przeznaczona jest dla jednej osoby.<br>Wpisz hasło, aby otworzyć dyplom.</p>
+      <form id="gate-form" autocomplete="off">
+        <label class="sr-only" for="gate-password">Hasło</label>
+        <div class="gate-field">
+          <input
+            type="password"
+            id="gate-password"
+            placeholder="Hasło"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            autofocus
+            required
+          >
+          <button type="button" class="gate-toggle" id="gate-toggle" aria-label="Pokaż hasło" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+        </div>
+        <button type="submit" class="btn btn--primary">Otwórz</button>
+      </form>
+      <p class="gate-error" id="gate-error" hidden>Niepoprawne hasło. Spróbuj jeszcze raz.</p>
+      <p class="gate-foot">Hasło nie jest nigdzie zapisywane.</p>
+    </div>
+  </main>
+
+  <main class="content" id="content" tabindex="-1" hidden></main>
+
+  <canvas id="confetti-canvas" aria-hidden="true" hidden></canvas>
+
+  <script src="js/crypto.js"></script>
+  <script src="js/gate.js"></script>
+</body>
+</html>
